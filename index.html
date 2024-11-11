@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预防宫颈癌 - 保护女性健康</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #fff4f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffd4dd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content h1 {
+            font-size: 2.2em;
+            color: #c44d6d;
+        }
+
+        .header-content p {
+            font-size: 1.2em;
+            color: #6b6b6b;
+            margin-top: 10px;
+        }
+
+        .header-image {
+            max-width: 100px;  /* 控制图片大小 */
+            height: auto;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #d1465e;
+            margin-bottom: 15px;
+            border-left: 5px solid #ffc2d1;
+            padding-left: 10px;
+        }
+
+        p, li {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #ff80a1, #ff5890);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #ff5890, #ff80a1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .faq-item {
+            margin: 15px 0;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .faq-item button {
+            width: 100%;
+            text-align: left;
+            padding: 12px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .faq-item button:hover {
+            background-color: #ffd4dd;
+        }
+
+        .faq-answer {
+            padding: 10px;
+            background-color: #fff4f6;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 1em;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <h1>预防消除宫颈癌，守护‘她’健康</h1>
+        <p>了解HPV的危害与预防，保护女性健康</p>
+    </div>
+    <img src="../resources/image/JNMU.jpg" alt="保护女性健康" class="header-image">
+</header>
+
+<section id="hpv-info">
+    <h2>什么是HPV?</h2>
+    <p>HPV（人乳头瘤病毒）是引起宫颈癌的主要原因。它通过性接触传播，许多人感染后没有症状，但长期感染可能导致癌变。</p>
+    <button onclick="toggleHPVDetails()">点击了解更多关于HPV的危害</button>
+    <div id="hpv-details" class="hidden">
+        <ul>
+            <li>HPV是最常见的性传播病毒。</li>
+            <li>感染HPV的女性如果不及时处理，可能会发展成宫颈癌。</li>
+            <li>HPV有多种类型，其中16型和18型是最常见的致癌类型。</li>
+        </ul>
+    </div>
+</section>
+
+<section id="prevention-info">
+    <h2>宫颈癌的预防措施</h2>
+    <p>通过以下方式可以有效预防宫颈癌：</p>
+    <ol>
+        <li>接种HPV疫苗</li>
+        <li>定期进行宫颈癌筛查（Pap smear）</li>
+        <li>保持良好的个人卫生和健康的生活方式</li>
+    </ol>
+    <button onclick="togglePreventionDetails()">点击了解更多预防方法</button>
+    <div id="prevention-details" class="hidden">
+        <p>HPV疫苗可以有效预防HPV感染，减少宫颈癌发生的风险。女性应在年轻时接种，最好在首次性生活前完成接种。</p>
+    </div>
+</section>
+
+<section id="faq">
+    <h2>常见问题</h2>
+    <div class="faq-item">
+        <button onclick="toggleFAQ('faq1')">HPV疫苗安全吗？</button>
+        <div id="faq1" class="faq-answer hidden">
+            <p>HPV疫苗是全球第一个用于预防肿瘤的疫苗，人类首次尝试通过疫苗消灭一种癌症。这种疫苗是利用病毒上的一种特别的蛋白质外壳，来引发人体的免疫力。所以疫苗本身不是病毒，是蛋白，没有病毒的功能，不会造成病毒感染。</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button onclick="toggleFAQ('faq2')">哪些人应该接种HPV疫苗？</button>
+        <div id="faq2" class="faq-answer hidden">
+            <p>HPV疫苗接种最好是在女性有第一次实质性性接触之前。美国推荐是9～26岁。</p>
+                <p>目前获准进入中国的疫苗，二价疫苗的推荐接种年龄为9～45岁，四价疫苗的推荐接种年龄是20～45岁，九价疫苗适用于16到26岁的女性。</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button onclick="toggleFAQ('faq3')">九价HPV疫苗使用的禁忌症是什么？</button>
+        <div id="faq3" class="faq-answer hidden">
+            <p>批准上市的九价HPV疫苗或四价HPV疫苗的活性成分或任何辅料成分有超敏反应者禁用；注射九价HPV疫苗或四价HPV疫苗后有超敏反应症状者，不应再次接种。</p>
+        </div>
+        <div class="faq-item">
+            <button onclick="toggleFAQ('faq4')">在接种之前是否检测体内是否感染HPV？如果感染过或者曾经有过宫颈病变，又治愈了，还可以接种吗？</button>
+            <div id="faq4" class="faq-answer hidden">
+                <p>HPV可以反复感染，一般认为接种前无需检测体内有无HPV感染。但是从医生角度，如果感染过HPV或者由此造成了宫颈病变，则另当别论，还是治疗转阴后再接种更好。也可以边治疗边接种。</p>
+                <p>2012年韩国的研究显示，HPV感染或由此引发的宫颈病变治愈后，进行HPV疫苗接种可以减少疾病的复发率。尤其是疫苗还能预防目前患者没有感染过的几类HPV病毒，那么接种还是有好处的。这是临床实践的结果。</p>
+                <p>2理论上认为，人体自然感染HPV后，抵抗病毒的体系是细胞免疫，主要在宫颈局部起作用，产生的抗体（对抗病毒的物质）水平很低，不足以对抗病毒的再次进攻。而疫苗是肌肉注射，会引发人体产生强烈有效的免疫反应，产生的抗体的滴度是自然感染的40倍以上，这样就可以防止病毒的感染。</p>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleFAQ('faq5')">孕妇和哺乳期女性可以接种吗？接种疫苗后怀孕怎么办？</button>
+                <div id="faq5" class="faq-answer hidden">
+                    <p>目前还没有孕妇和哺乳妇女中的相关数据，暂时不推荐孕妇和哺乳妇女接种宫颈癌疫苗。其实HPV的危害并没有想象的那么大，这部分女性可以等一段时间，等胎儿出生和断奶后再接种HPV疫苗也不迟。</p>
+                    <p>目前没有发现疫苗对胎儿有不利影响。所以，在疫苗接种的6个月内如果意外怀孕，可以严密观察继续怀孕。</p>
+                </div>
+                <div class="faq-item">
+                    <button onclick="toggleFAQ('faq6')">为何以前接种总是提到，没有性生活的女性接种效果好呢？</button>
+                    <div id="faq6" class="faq-answer hidden">
+                        <p>即使有过性生活，照样可以接种疫苗。以前的观点认为，女性有性生活后，被HPV感染的机会急剧增加。如果给这些女性接种疫苗，对分析结果的研究者而言，“不太好算”，从经济上，则“不太合算”。因为，从宏观层面，需要用最少的钱办最大的事儿，好钢要用在刀刃上。但是，只是不太合算，并非没有医学价值。如果是自己出钱去接种，可以不去考虑这种经济效益。</p>
+                    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 济宁医学院宫颈癌预防组织 | 保护女性健康，行动起来！</p>
+</footer>
+
+<script>
+    // 切换显示HPV详细信息
+    function toggleHPVDetails() {
+        const details = document.getElementById('hpv-details');
+        details.classList.toggle('hidden');
+    }
+
+    // 切换显示宫颈癌预防的详细信息
+    function togglePreventionDetails() {
+        const details = document.getElementById('prevention-details');
+        details.classList.toggle('hidden');
+    }
+
+    // 切换常见问题的答案显示
+    function toggleFAQ(faqId) {
+        const faqAnswer = document.getElementById(faqId);
+        faqAnswer.classList.toggle('hidden');
+    }
+</script>
+</body>
+</html>
